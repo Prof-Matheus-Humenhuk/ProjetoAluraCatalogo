@@ -1,7 +1,7 @@
 body {
     color: white;
-    background: rgb(0, 0, 0);
-    margin: 0px;
+    background: black;
+    margin: 0;
     font-family: "Roboto", sans-serif;
 }
 
@@ -10,16 +10,46 @@ header {
     padding: 20px;
     font-size: 32px;
     color: rgb(219, 40, 20);
+    text-align: center;
 }
 
-section {
-	background: rgb(90, 96, 91);
-	padding-bottom: 80px;
-	padding-top: 80px;
-	display: flex;
-	justify-content: center;
+.chamada {
+    background: rgb(90, 96, 91);
+    padding: 80px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 
 .chamada-texto {
     margin-right: 5%;
+    max-width: 300px;
+}
+
+.video iframe {
+    max-width: 100%;
+    height: auto;
+}
+
+img {
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.05);
+}
+
+.categoria {
+    padding: 20px;
+}
+
+.categoria-videos {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px;
+    padding-top: 10px;
 }
