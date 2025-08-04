@@ -28,7 +28,7 @@
         </div>
 
         <div class="video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/RCIqtHc6tfs?si=7OedG0RZtzVP1Na7"
+            <iframe id="main-video" width="560" height="315" src="https://www.youtube.com/embed/RCIqtHc6tfs?si=7OedG0RZtzVP1Na7"
                 title="YouTube video player" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -38,23 +38,36 @@
     <section class="categoria">
         <h2>Transforme-se em um piloto melhor</h2>
         <div class="categoria-videos">
-            <a href="https://youtu.be/xeVRiUP_iQ8?si=I-Pb52KngdTCKz84">
+            <a onclick="changeVideo('xeVRiUP_iQ8')">
                 <img src="https://img.youtube.com/vi/xeVRiUP_iQ8/maxresdefault.jpg" alt="Dicas de pilotagem 1" />
             </a>
-            <a href="https://youtu.be/AIpIgUqiF-8?si=QDORgtzL4Jg76z0l">
+            <a onclick="changeVideo('AIpIgUqiF-8')">
                 <img src="https://img.youtube.com/vi/AIpIgUqiF-8/maxresdefault.jpg" alt="Dicas de pilotagem 2" />
             </a>
-            <a href="https://youtu.be/EOPynlKt6MI?si=7UV9a3cJyWVNgSi6">
+            <a onclick="changeVideo('EOPynlKt6MI')">
                 <img src="https://img.youtube.com/vi/EOPynlKt6MI/maxresdefault.jpg" alt="Dicas de pilotagem 3" />
             </a>
-            <a href="https://youtu.be/hy3k5ZeruUI?si=Fy-QjVPNV64uNYFR">
+            <a onclick="changeVideo('hy3k5ZeruUI')">
                 <img src="https://img.youtube.com/vi/hy3k5ZeruUI/maxresdefault.jpg" alt="Dicas de pilotagem 4" />
             </a>
-            <a href="https://www.youtube.com/watch?v=Q3SDTgFLukA">
+            <a onclick="changeVideo('Q3SDTgFLukA')">
                 <img src="https://img.youtube.com/vi/Q3SDTgFLukA/maxresdefault.jpg" alt="Dicas de pilotagem 5" />
             </a>
         </div>
     </section>
+
+    <script>
+        function changeVideo(videoId) {
+            // Obtém o elemento do vídeo principal
+            const mainVideo = document.getElementById('main-video');
+            
+            // Cria a nova URL do vídeo com o ID fornecido
+            const newSrc = `https://www.youtube.com/embed/${videoId}?autoplay=1&si=7OedG0RZtzVP1Na7&accelerometer=1&clipboard-write=1&encrypted-media=1&gyroscope=1&picture-in-picture=1&web-share=1`;
+            
+            // Atualiza o src do iframe com o novo vídeo
+            mainVideo.src = newSrc;
+        }
+    </script>
 </body>
 
 </html>
